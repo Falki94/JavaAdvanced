@@ -1,12 +1,33 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-Hello world
-</body>
-</html>
+<%@ page language="java" contentType="text/html"
+    pageEncoding="UTF-8"%>
+<%@taglib prefix="t" tagdir="/WEB-INF/tags/templates" %>    
+<t:layout>
+	<jsp:attribute name="styles">
+		<!-- put your styles here -->
+	</jsp:attribute>
+	<jsp:attribute name="scripts">
+		<script type="text/javascript">
+		$.ajax({
+            url: "/bonus/rest/service/test",
+            type: "POST",
+            data: ko.toJSON({
+            	messege:"hello"
+            }),
+            contentType: "application/json",
+            success: function (data) {
+                alert("udało się");
+            },
+            error: function (XMLHttpRequest, testStatus, errorThrown) {
+               alert("nie udało się")
+
+            }
+        });
+			
+		</script>	
+		
+	</jsp:attribute>
+	<jsp:body>
+		Hello World
+	</jsp:body>
+	
+</t:layout>

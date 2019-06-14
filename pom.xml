@@ -1,10 +1,10 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>xcom</groupId>
-  <artifactId>xcom</artifactId>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>bonus</artifactId>
+	<groupId>com.example</groupId>
+	<packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
- 
   <dependencies>
 	<dependency>
 		<groupId>javax</groupId>
@@ -31,10 +31,10 @@
   </dependencies>
   
   <build>
-		<finalName>xcomapp</finalName>
+		<finalName>bonus</finalName>
     <plugins>
       <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
+        <artifactId>bonus</artifactId>
         <version>3.1</version>
         <configuration>
           <source>1.8</source>
@@ -50,5 +50,5 @@
       </plugin>
     </plugins>
   </build>
-    <name>xcom</name>
+    <name>bonus</name>
 </project>
